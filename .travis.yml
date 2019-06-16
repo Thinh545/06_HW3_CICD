@@ -11,3 +11,4 @@ deploy:
   app: hw3cicd06
   on:
     repo: Thinh545/06_HW3_CICD
+    brand: master
