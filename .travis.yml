@@ -7,8 +7,7 @@ cache:
 after_success:
   - deploy:
     provider: heroku
-    api_key:
-      secure: cafe3cc5-fc69-4588-b8f3-bece79803bfd
+    api_key: cafe3cc5-fc69-4588-b8f3-bece79803bfd
     app: hw3cicd06
     on:
       branch: master
