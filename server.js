@@ -21,9 +21,10 @@ mongoose
   .catch(err => console.log(err));
 
 // Use Routes
-app.get('/hello', (req, res) => {
+app.get('/index', (req, res) => {
   res.status(200).json({
-    message: 'Hello!'
+    "service": "shopping-site-service",
+    "action": "🔍"
   })
 });
 app.use('/api/items', require('./routes/api/items'));
