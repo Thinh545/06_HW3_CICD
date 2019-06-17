@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb://tham:jh6g3k45eulty8dgrhs@ds137857.mlab.com:37857/shop",
+  "jwtSecret": "sl_myJwtSecret"
+}
