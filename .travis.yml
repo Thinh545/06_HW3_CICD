@@ -7,8 +7,7 @@ cache:
 deploy:
   provider: heroku
   api_key:
-    secure: m8QyZd2JKermWNUb5iCzGP/PfOfxGJpJ7q4KtXB2fiRwoezmHHdZubr85h77DfTW7dUouh8hJUQeEWZtsibvpmkK8+h6+0zAbnaSXVrnvgVzG77+T2d3p9v92EvuRvOybE20U0vaE9EMoy55ZkVxf+nvg0Px6MpW5uhcq8P3yI95wFmD8Mp28zd9pdwMD1m8pDX4t10PqnjBGlJ4hoIHzUR+bpuN4+HJeSPUQdjIfSJ/jf+2mLmo9UJ4r6Z5jBILTv7M/jZzHUTs4PHQFNlwxCFc8K56YB42r2bnk0/KMgmOYneV1AK+7f5QK4XJE85kbGnm+uZ7LX9DjOVTK8t5c2Oxvjgf5Op6DGshZivx4TbLBcFhJJQSB7BqMr4/7NF8TksB46XM5kplIVv7H3BGH+4HwkbHwf8+4pLdx8/1IH7miysKjmUK+mKADNNw/+PAHe9Ipogn+SzMj0UWWpnC9XBDJfZJp0yymeg10XKgnFZkmCbSUto9Krio+YAsacQCqsCR95Vx0zD5pMqd1Lu89Lbjs2KtGHaGyyCrDdTXfFiRpgqijBkIeD3fkkx/bL4RGeq4zcpHNPX/9P5fu6SvQQb0khGynu49ji+vMHnEi8V0NgQFIt4mQXCmKkQGW0pMkPW37AQeYoDOLwuo1VlqbRUXa3UQxljTwMASiM02sVM=
+    secure: cafe3cc5-fc69-4588-b8f3-bece79803bfd
   app: hw3cicd06
   on:
     repo: Thinh545/06_HW3_CICD
-    brand: master
