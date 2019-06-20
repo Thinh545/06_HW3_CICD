@@ -22,10 +22,11 @@ mongoose
 
 // Use Routes
 app.get('/index', (req, res) => {
-  res.status(200).json({
-    "service": "shopping-site-service",
-    "action": "🔍"
-  })
+  res.status(500).send("Error")
+  // res.status(200).json({
+  //   "service": "shopping-site-service",
+  //   "action": "🔍"
+  // })
 });
 app.use('/api/items', require('./routes/api/items'));
 app.use('/api/users', require('./routes/api/users'));

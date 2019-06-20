@@ -15,7 +15,7 @@ describe('LOGIN', function () {
         .expect(200)
         .end(function (err, res) {
             if (err) {
-                console.log("error ", err)
+                // console.log("error ", err)
                 throw err
             }
 
@@ -44,8 +44,8 @@ describe('GET /', function () {
     it("should return json with some message", function (done) {
         // The line below is the core test of our app.     
         request(app).get('/index')
-            .expect("Content-type", /json/)
             .expect(200) // THis is HTTP response
+            .expect("Content-type", /json/)
             .end(function (err, res) {
                 if (err) throw err
 
@@ -83,7 +83,17 @@ describe('GET /', function () {
 
     it("get user info without token", function (done) {
         request(app).get("/api/auth/user")
-        .expect(401, done)
+        .expect(403)
+        .end((err, res) => {
+            if (err) throw err
+
+            console.log('res.status: ', res.status);
+            if (res.status == 403) {
+                done();
+            } else {
+                throw new Error("Not expected response")
+            }
+        })
     });
 });
 
@@ -91,7 +101,7 @@ describe('POST /', function() {
     it("create new item failed without token", function (done) {
         request(app).post("/api/items")
         .send({'name': 'test data-' + Math.floor(new Date() / 1000)})
-        .expect(401, done)
+        .expect(500, done)
     });
 
     it("create new item", function (done) {
