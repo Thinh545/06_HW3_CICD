@@ -11,3 +11,5 @@ deploy:
   app: hw3cicd06
   on:
     repo: Thinh545/06_HW3_CICD
+notifications:
+  slack: hcmusglobal:DVLhEhFTVd9e9awvzbTS3kGa
