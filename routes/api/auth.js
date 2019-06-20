@@ -58,7 +58,7 @@ router.post('/', (req, res) => {
 router.get('/user', auth, (req, res) => {
   User.findById(req.user.id)
     .select('-password')
-    .then(user => res.status(200).json(user));
+    .then(user => res.status(400).json(user));
 });
 
 module.exports = router;

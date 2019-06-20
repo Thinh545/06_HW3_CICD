@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 // @access  Private
 router.post('/', auth, (req, res) => {
   const newItem = new Item({
-    name: req.body.name1
+    name: req.body.name
   });
 
   console.log('POST /api/items');
