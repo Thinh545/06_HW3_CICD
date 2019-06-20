@@ -31,6 +31,7 @@ router.post('/', auth, (req, res) => {
 // @desc    Delete A Item
 // @access  Private
 router.delete('/:id', auth, (req, res) => {
+  return res.status(400).json({ msg: "failed"})
   Item.findById(req.params.id)
     .then(item => item.remove().then(() => res.json({ success: true })))
     .catch(err => res.status(404).json({ success: false }));
