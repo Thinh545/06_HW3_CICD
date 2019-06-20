@@ -19,12 +19,12 @@ router.get('/', (req, res) => {
 // @access  Private
 router.post('/', auth, (req, res) => {
   const newItem = new Item({
-    name: req.body.name
+    name: req.body.name1
   });
 
   console.log('POST /api/items');
 
-  newItem.save().then(item => res.json(item)).catch(err => console.log(err));
+  newItem.save().then(item => res.json(item)).catch(err => console.log(err.errors.name.message));
 });
 
 // @route   DELETE api/items/:id

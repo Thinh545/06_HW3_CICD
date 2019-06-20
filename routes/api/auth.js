@@ -15,7 +15,7 @@ const User = require('../../models/User');
 router.post('/', (req, res) => {
   const { email, password } = req.body;
 
-  res.status(500).json({ msg: 'Unexpected Error' });
+  // res.status(500).json({ msg: 'Unexpected Error' });
 
   // Simple validation
   if(!email || !password) {
@@ -58,7 +58,7 @@ router.post('/', (req, res) => {
 router.get('/user', auth, (req, res) => {
   User.findById(req.user.id)
     .select('-password')
-    .then(user => res.json(user));
+    .then(user => res.status(200).json(user));
 });
 
 module.exports = router;

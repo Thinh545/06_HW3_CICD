@@ -19,13 +19,8 @@ describe('LOGIN', function () {
                     throw err
                 }
 
-                if (res.status == 200) {
-                    // console.log(res.body);
-                    token = res.body.token;
-                    done();
-                } else {
-                    throw new Error("Not expected response");
-                }
+                token = res.body.token;
+                done();
             })
     });
 
@@ -83,17 +78,17 @@ describe('GET /', function () {
 
     it("get user info without token", function (done) {
         request(app).get("/api/auth/user")
-            .expect(403)
-            .end((err, res) => {
-                if (err) throw err
+            .expect(401, done)
+            // .end((err, res) => {
+            //     if (err) throw err
 
-                console.log('res.status: ', res.status);
-                if (res.status == 403) {
-                    done();
-                } else {
-                    throw new Error("Not expected response")
-                }
-            })
+            //     console.log('res.status: ', res.status);
+            //     if (res.status == 403) {
+            //         done();
+            //     } else {
+            //         throw new Error("Not expected response")
+            //     }
+            // })
     });
 });
 
@@ -101,7 +96,7 @@ describe('POST /', function () {
     it("create new item failed without token", function (done) {
         request(app).post("/api/items")
             .send({ 'name': 'test data-' + Math.floor(new Date() / 1000) })
-            .expect(500, done)
+            .expect(401, done)
     });
 
     it("create new item", function (done) {
