@@ -12,6 +12,4 @@ deploy:
   on:
     repo: Thinh545/06_HW3_CICD
 notifications:
-  slack: hcmusglobal:ereBPoRZEJXeA7FoMV1icBA3
-    on_success: always
-    on_failure: always
+  slack: hcmusglobal:DVLhEhFTVd9e9awvzbTS3kGa
